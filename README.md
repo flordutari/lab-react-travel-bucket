@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# LAB | React Travel Bucket List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Learning Goals
 
-## Available Scripts
+Upon completion of this exercise, you will be able to:
 
-In the project directory, you can run:
+- Use the useState hook to create state variables and add state to React components.
+- Use state variable setter functions to update state and trigger component re-render.
+- Use array method map() to render array data as a list of elements.
+- Use array methods filter(), splice(), push(), and array copying techniques to delete or add items to React lists.
+- Create controlled components to manage the form inputs.
+- Create event handler functions to handle user interactions and browser events.
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You’ve realized that you want to keep track of all the destinations you plan to visit in the future. To do this, you'll create a travel bucket list app that helps you track destinations, categorize them by continent, and keep notes on your future adventures.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup
 
-### `npm test`
+- Fork this repo
+- Clone the forked repo
+- Open the LAB and start:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ```bash
+  cd lab-react-travel-bucket
+  npm install
+  npm start
+  ```
 
-### `npm run build`
+## Submission
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Upon completion, run the following commands:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+  git add .
+  git commit -m "done"
+  git push origin master
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```
 
-### `npm run eject`
+- Create a Pull Request so I can check your work.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Iteration 0 | Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Import JSON Data
+Create a destinations.json file with an array of destinations. Each destination should have the following properties: name, image, continent, visited (boolean), and notes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+[
+    {
+        "name": "Paris",
+        "image": "https://linktoparisimage.com",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "Tokyo",
+        "image": "https://linktotokyoimage.com",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the temples."
+    },
+    // Add more destinations...
+];
+```
 
-## Learn More
+Import the array into App.js:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`import destinations from "./destinations.json";`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Iteration 1 | Render a Simple List
 
-### Code Splitting
+Now that you’ve imported the destination data, save it in a state variable using useState. Map over the state variable and render a simple list that displays the destination names and images:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+<div>
+  <p>DESTINATION_NAME_HERE</p>
+  <img src="DESTINATION_IMAGE_HERE" width={100} />
+</div>
+```
 
-### Analyzing the Bundle Size
+### Iteration 2 | Create the DestinationBox Component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create a new component named DestinationBox. It should take a destination prop (an object) and render the following details: name, image, continent, notes, and a "Mark as Visited" button.
 
-### Making a Progressive Web App
+Once created, test it by rendering a single instance of the component in App.js:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+<DestinationBox destination={{
+  name: "Paris",
+  image: "https://linktoparisimage.com",
+  continent: "Europe",
+  visited: false,
+  notes: "Visit the Eiffel Tower."
+}} />
+```
 
-### Advanced Configuration
+### Iteration 3 | Render a List of DestinationBox Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Use the DestinationBox component to render the list of all destinations from the destinations.json file. Remember to pass the destination object as a prop.
 
-### Deployment
+Your app should now display a list of destinations with their details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Iteration 4 | Mark Destinations as Visited
 
-### `npm run build` fails to minify
+When users click "Mark as Visited" on a destination, update the state to reflect that the destination has been visited. Optionally, you can filter the list to show only unvisited destinations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Iteration 5 | Create a Delete Button
+
+Add a delete button to the DestinationBox component. When clicked, the destination should be removed from the list. Pass a function through props from App.js to handle this.
