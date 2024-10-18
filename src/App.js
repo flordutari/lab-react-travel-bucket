@@ -2,19 +2,15 @@ import logo from "./logo.svg";
 import "./App.css";
 import destinations from "./destinations.json";
 import { useState } from "react";
+import DestinationBox from "./components/DestinationBox";
 
 function App() {
   const [destination, setDestination] = useState([destinations]);
 
   return (
     <>
-      <h2>Travel bucket list</h2>
-      {destinations.map((city) => (
-        <div>
-          <p>{city.name}</p>
-          <img src={city.image} />
-        </div>
-      ))}
+      {/* {console.log(destinations)} */}
+      <DestinationBox cities={destinations} />
     </>
   );
 }
