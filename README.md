@@ -111,3 +111,5 @@ When users click "Mark as Visited" on a destination, update the state to reflect
 ### Iteration 5 | Create a Delete Button
 
 Add a delete button to the DestinationBox component. When clicked, the destination should be removed from the list. Pass a function through props from App.js to handle this.
+
+Vanya's line
