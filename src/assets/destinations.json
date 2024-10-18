@@ -1,14 +1,14 @@
 [
     {
         "name": "Paris",
-        "image": "https://linktoparisimage.com",
+        "image": "https://images.pexels.com/photos/1850619/pexels-photo-1850619.jpeg?auto=compress&cs=tinysrgb&w=600",
         "continent": "Europe",
         "visited": false,
         "notes": "Visit the Eiffel Tower."
     },
     {
         "name": "Tokyo",
-        "image": "https://linktotokyoimage.com",
+        "image": "https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=600",
         "continent": "Asia",
         "visited": false,
         "notes": "Explore the temples."

@@ -1,28 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import destinations from "./assets/destinations.json"
-import { useState } from 'react';
+import logo from "./logo.svg";
+import "./App.css";
+import destinations from "./assets/destinations.json";
+import { useState } from "react";
 
 function App() {
   // eslint-disable-next-line no-use-before-define
-  const [destinationsList, setDestinationsList] = useState(destinations)
+  const [destinationsList, setDestinationsList] = useState(destinations);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <ul>
+          {destinationsList.map((destination, index) => {
+            console.log("from destinations json: ", destination)
+            return (
+              <li key={index}>
+                <p>{destination.name}</p>
+                <img src={destination.image} alt="destination" />
+              </li>
+            );
+          })}
+        </ul>
+      </main>
     </div>
   );
 }
