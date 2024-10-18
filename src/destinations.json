@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Paris",
+        "image": "https://linktoparisimage.com",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "Tokyo",
+        "image": "https://linktotokyoimage.com",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the temples."
+    },
+    {
+        "name": "London",
+        "image": "https://linktolondonimage.com",
+        "continent": "Island nation",
+        "visited": true,
+        "notes": "Enjoy the nightlife." 
+    },
+    {
+        "name": "Seoul",
+        "image": "https://linktoseoulimage.com",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Enjoy the gastronomy and fashion." 
+    },
+    {
+        "name": "Zanzibar",
+        "image": "https://linktozanzibarimage.com",
+        "continent": "Africa",
+        "visited": false,
+        "notes": "Enjoy the sugar sand beaches." 
+    }
+]
+
