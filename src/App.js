@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react'
+import destinations from './destinations.json';
 import './App.css';
 
-function App() {
+export default function App() {
+
+  const [destinationData, setDestinationData] = useState(destinations)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {destinationData.map(destination => (
+          <li>
+            <p>{destination.name}</p>
+            <img src={destination.image} style={{width: '100px'}} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default App;
+
