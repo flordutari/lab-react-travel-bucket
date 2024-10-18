@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import destinations from "./assets/destinations.json";
 import { useState } from "react";
+import DestinationBox from "./components/DestinationBox";
 
 function App() {
   // eslint-disable-next-line no-use-before-define
@@ -10,17 +11,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <ul>
-          {destinationsList.map((destination, index) => {
-            console.log("from destinations json: ", destination)
-            return (
-              <li key={index}>
-                <p>{destination.name}</p>
-                <img src={destination.image} alt="destination" />
-              </li>
-            );
-          })}
-        </ul>
+        <DestinationBox destinationsList= {destinationsList}></DestinationBox>
       </main>
     </div>
   );
