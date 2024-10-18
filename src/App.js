@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import destinations from "./destinations.json";
+import { useState } from "react";
 
 function App() {
+  const [destination, setDestination] = useState([destinations]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Travel bucket list</h2>
+      {destinations.map((city) => (
+        <div>
+          <p>{city.name}</p>
+          <img src={city.image} />
+        </div>
+      ))}
+    </>
   );
 }
 
