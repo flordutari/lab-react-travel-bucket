@@ -1,0 +1,46 @@
+{  
+  "destinations": [
+    {
+        "name": "Paris",
+        "image": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "Tokyo",
+        "image": "https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the temples."
+    },
+    {
+      "name": "Barcelona",
+      "image": "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "continent": "Europe",
+      "visited": false,
+      "notes": "Explore Parc Guell and the Gaudi architecture."
+    },
+    {
+      "name": "London",
+      "image": "https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "continent": "Europe",
+      "visited": false,
+      "notes": "Stroll round the many London parks."
+    },
+    {
+      "name": "Lima",
+      "image": "https://images.pexels.com/photos/22484277/pexels-photo-22484277/free-photo-of-seaside-city-from-a-birds-eye-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "continent": "South America",
+      "visited": false,
+      "notes": "Visit the Museo Larco."
+    },
+    {
+      "name": "Hanoi",
+      "image": "https://images.pexels.com/photos/1437618/pexels-photo-1437618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "continent": "Asia",
+      "visited": false,
+      "notes": "Explore the chaotic Old Quarter."
+    } 
+  ]
+}
