@@ -8,7 +8,14 @@ function App() {
 
   const markAsVisitied = (name) => {
     const updatedDestinations = destinationList.map((destination) =>
-      destination.name == name ? { ...destination, visted: true } : destination
+      destination.name === name ? { ...destination, visted: true } : destination
+    );
+    setDestinationList(updatedDestinations);
+  };
+
+  const deleteDestination = (name) => {
+    const updatedDestinations = destinationList.filter(
+      (destination) => destination.name !== name
     );
     setDestinationList(updatedDestinations);
   };
@@ -20,6 +27,7 @@ function App() {
           key={index}
           destination={destination}
           markAsVisitied={markAsVisitied}
+          deleteDestination={deleteDestination}
         />
       ))}
     </div>
