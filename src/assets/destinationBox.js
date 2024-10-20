@@ -1,6 +1,6 @@
 import React from "react";
 
-function DestinationBox({ destination, markAsVisitied, deleteDestination }) {
+function DestinationBox({ destination, markAsVisited, deleteDestination }) {
   return (
     <div>
       <h2>{destination.name}</h2>
@@ -13,9 +13,10 @@ function DestinationBox({ destination, markAsVisitied, deleteDestination }) {
         <strong>Notes:</strong>
         {destination.notes}
       </p>
-      <button onClick={() => markAsVisitied(destination.name)}>
-        {destination.vistited ? "Visited" : "Mark as Visited"}
+      <button onClick={() => markAsVisited(destination.name)}>
+        {destination.visited ? "Visited" : "Mark As Visited"}
       </button>
+
       <button onClick={() => deleteDestination(destination.name)}>
         Delete
       </button>

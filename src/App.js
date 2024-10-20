@@ -6,9 +6,11 @@ import DestinationBox from "./assets/destinationBox";
 function App() {
   const [destinationList, setDestinationList] = useState(destinations);
 
-  const markAsVisitied = (name) => {
+  const markAsVisited = (name) => {
     const updatedDestinations = destinationList.map((destination) =>
-      destination.name === name ? { ...destination, visted: true } : destination
+      destination.name === name
+        ? { ...destination, visited: true }
+        : destination
     );
     setDestinationList(updatedDestinations);
   };
@@ -26,7 +28,7 @@ function App() {
         <DestinationBox
           key={index}
           destination={destination}
-          markAsVisitied={markAsVisitied}
+          markAsVisited={markAsVisited}
           deleteDestination={deleteDestination}
         />
       ))}
