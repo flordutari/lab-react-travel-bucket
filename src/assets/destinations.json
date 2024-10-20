@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Paris",
+        "image": "https://linktoparisimage.com",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "Tokyo",
+        "image": "https://linktotokyoimage.com",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the temples."
+    }
+]
