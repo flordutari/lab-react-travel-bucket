@@ -1,28 +1,26 @@
 import React from "react";
-
-export default function DestinationBox({ cities }) {
-  function handleMarkAsVisited(city) {
-    console.log(city);
-    console.log(city.visited);
-    const haveVisited = !city.visited;
-    city.visited = haveVisited;
-    console.log(city.visited);
-  }
-
+import "../App.css";
+export default function DestinationBox({
+  cities,
+  onDeleteCity,
+  onMarkAsVisited,
+}) {
   return (
     <>
-      {console.log(cities)}
-
       <h2>Travel bucket list</h2>
       {cities.map((city, index) => (
-        <div>
-          <p key={city.name}>{city.name}</p>
+        <div key={city.name}>
+          <p>{city.name}</p>
           <img key={city.img} className="city-img" src={city.image} />
           <p key={city.continent}>{city.continent}</p>
           <p key={city.notes}>{city.notes}</p>
-          <button onClick={() => handleMarkAsVisited(city)}>
+          <button
+            onClick={() => onMarkAsVisited(city)}
+            className={!city.visited ? "enabled" : "disabled"}
+          >
             Mark as visited
           </button>
+          <button onClick={() => onDeleteCity(city)}>Delete</button>
         </div>
       ))}
     </>

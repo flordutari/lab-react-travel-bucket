@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import destinations from "./destinations.json";
 import { useState } from "react";
@@ -12,12 +11,34 @@ function App() {
     const newCityList = destination.filter((city) => city !== deleteCity);
     setDestination(newCityList);
   }
+
+  function markAsVisited(city) {
+    // console.log(city);
+    // console.log(city.visited);
+    // const haveVisited = !city.visited;
+    // city.visited = haveVisited;
+    // console.log(city);
+
+    let newCityList = [...destination];
+    let visitStatus = !city.visited;
+
+    newCityList.map((i) => {
+      if (i.name === city.name) {
+        i.visited = visitStatus;
+      }
+    });
+    setDestination(newCityList);
+    console.log(city.visited);
+    console.log(destination);
+  }
+
   return (
     <>
-      {console.log(destination)}
+      {/* {console.log(destination)} */}
       <DestinationBox
         cities={destination}
         onDeleteCity={(city) => deleteCity(city)}
+        onMarkAsVisited={(city) => markAsVisited(city)}
       />
     </>
   );
