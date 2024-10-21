@@ -112,3 +112,11 @@ When users click "Mark as Visited" on a destination, update the state to reflect
 ### Iteration 5 | Create a Delete Button
 
 Add a delete button to the DestinationBox component. When clicked, the destination should be removed from the list. Pass a function through props from App.js to handle this.
+
+### Iteration 6 | Add a New Destination
+Create a controlled component named AddDestinationForm. This component should contain input fields for the name, image, continent, and notes of a new destination.
+
+When the user submits the form, the new destination should be added to the list. To achieve this, pass a function from App.js to handle adding the new destination to the state.
+
+Iteration 7 | Implement Search Bar
+Create a Search component to search through and filter the list of destinations by name. This will allow users to search for specific destinations in their bucket list.

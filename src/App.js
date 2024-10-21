@@ -1,48 +1,47 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 import destinations from "./destinations.json";
-import DestinationBox from './components/DestinationBox';
+import { DestinationBox } from "./components/DestinationBox";
+import { AddDestinationForm } from "./components/AddDestinationForm";
 
 function App() {
-  console.log(destinations);
   const [locations, setLocations] = useState(destinations.destinations || []);
+  const [input, setInput] = useState({name: "", image: "", continent: "", visited: false, notes: ""})
 
-  const removeDestination = (index) => {
+  const removeDestination = (name) => {
     let newLocations = [...locations];
-    newLocations.splice(index, 1);
+    newLocations.splice(name, 1);
     setLocations(newLocations)
+  };
+
+  function handleChange(e) {
+    const newInput = {...input};
+    newInput[e.target.name] = e.target.value
+    setInput({...newInput});
   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newLocations = [...locations];
+    newLocations.push(input);
+    setLocations(newLocations);
+    setInput({name: "", image: "", continent: "", visited: false, notes: ""});
+  } 
 
   return (
     <div className="App">
-      {/* <ul>
-      {locations.map((location, index) => (
-        <li key={index}>
-          {location.name} {" "} 
-          <img src={location.image} width={150} alt={location.name} />
-        </li>
-      ))}
-      </ul> */}
       <h1>
         Explore Destinations
       </h1>
-      <div>
-        {locations.map((location, index) => (
-          <DestinationBox key={index} destination={location} onDelete={(index) => removeDestination(index)} />
+      <AddDestinationForm handleSubmit={handleSubmit} handleChange={handleChange}/>
+      <div className="destination-cards">
+        {locations.map((location, name) => (
+          <DestinationBox key={location.name} destination={location} onDelete={() => removeDestination(name)} />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default App;
-
-
-  // useEffect(() => {
-  //   fetch('./destinations.json')
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     setLocations(data)
-  //   })
-  //   .catch((error) => console.error("Error loading json", error))
-  // }, []);
