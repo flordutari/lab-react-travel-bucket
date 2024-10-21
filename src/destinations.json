@@ -16,7 +16,7 @@
     {
         "name": "London",
         "image": "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "continent": "Island nation",
+        "continent": "Island Nation",
         "visited": true,
         "notes": "Enjoy the nightlife." 
     },
@@ -33,6 +33,13 @@
         "continent": "Africa",
         "visited": false,
         "notes": "Enjoy the sugar sand beaches." 
+    },
+    {
+        "name": "Mauritius",
+        "image": "https://images.unsplash.com/photo-1513415277900-a62401e19be4?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "continent": "Island Nation",
+        "visited": false,
+        "notes": "Swim in the crystalline, turquoise waters." 
     }
 ]
 

@@ -2,6 +2,8 @@
   text-align: center;
 }
 
-ul {
-  list-style-type: none;
+
+h1 {
+  font-family: monospace;
+  margin: 2em auto;
 }
