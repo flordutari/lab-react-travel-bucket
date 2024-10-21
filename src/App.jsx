@@ -55,8 +55,8 @@ function App() {
     <div className="App">
       <main>
         <DestinationBox destinationsList= {destinationsList} handleVisitedBtn={(index)=> handleVisitedBtn(index)} handleDeleteBtn={(index)=>handleDeleteBtn(index)}></DestinationBox>
-        <NewDestinationForm handleChange={handleChange}></NewDestinationForm>
-        <form onSubmit={handleSubmit}>
+        <NewDestinationForm handleChange={handleChange} handleSubmit={handleSubmit} input={input}></NewDestinationForm>
+        {/* <form onSubmit={handleSubmit}>
             <input
               value={input.name}
               name="name"
@@ -82,7 +82,7 @@ function App() {
             onChange={handleChange}
             placeholder="Additional notes"/>
             <button type="submit">Add to list</button>
-          </form>
+          </form> */}
       </main>
     </div>
   );
