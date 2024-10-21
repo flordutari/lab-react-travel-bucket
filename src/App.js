@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import destinations from "./assets/destinations.json";
-import DestinationBox from "./components/destinationBox";
+import DestinationBox from "./components/DestinationBox";
 
 function App() {
   const [destinationList, setDestinationList] = useState(destinations);
@@ -15,7 +15,7 @@ function App() {
     setDestinationList(updatedDestinations);
   };
 
-  const DeleteDestination = (name) => {
+  const deleteDestination = (name) => {
     const updatedDestinations = destinationList.filter(
       (destination) => destination.name !== name
     );
@@ -29,7 +29,7 @@ function App() {
           key={index}
           destination={destination}
           markAsVisited={markAsVisited}
-          DeleteDestination={DeleteDestination}
+          deleteDestination={deleteDestination}
         />
       ))}
     </div>
