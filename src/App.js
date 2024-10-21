@@ -9,7 +9,7 @@ function App() {
   const markAsVisited = (name) => {
     const updatedDestinations = destinationList.map((destination) =>
       destination.name === name
-        ? { ...destination, visited: true }
+        ? { ...destination, visited: !destination.visited }
         : destination
     );
     setDestinationList(updatedDestinations);
