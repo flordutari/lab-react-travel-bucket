@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import destinations from "./assets/destinations.json";
 import DestinationBox from "./components/DestinationBox";
+import SearchBar from "./components/SearchBar";
 import AddDestinationForm from "./components/AddDestinationForm";
 
 function App() {
   const [destinationList, setDestinationList] = useState(destinations);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const markAsVisited = (name) => {
     const updatedDestinations = destinationList.map((destination) =>
@@ -23,17 +25,24 @@ function App() {
     setDestinationList(updatedDestinations);
   };
 
+  const filteredDestinations = destinationList.filter((destination) =>
+    destination.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const addDestination = (newDestination) => {
-    setDestinationList([
-      ...destinationList,
-      { ...newDestination, visited: false },
+    setDestinationList((prevDestinations) => [
+      ...prevDestinations,
+      newDestination,
     ]);
   };
 
   return (
     <div className="App">
-      <AddDestinationForm onAddDestination={addDestination} />
-      {destinationList.map((destination, index) => (
+      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+
+      <AddDestinationForm addDestination={addDestination} />
+
+      {filteredDestinations.map((destination, index) => (
         <DestinationBox
           key={index}
           destination={destination}

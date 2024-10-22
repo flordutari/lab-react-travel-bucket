@@ -1,35 +1,46 @@
 import React, { useState } from "react";
 
-export default function AddDestinationForm({ onAddDestination }) {
-  const [formValues, setFormValues] = useState({
+export default function AddDestinationForm({ addDestination }) {
+  const [formData, setFormData] = useState({
     name: "",
     image: "",
     continent: "",
     notes: "",
+    visited: false,
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formValues.name && formValues.image && formValues.continent) {
-      onAddDestination(formValues);
-      setFormValues({ name: "", image: "", continent: "", notes: "" });
-    } else {
-      alert("Please fill in all required fields");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (formData.name && formData.image && formData.continent) {
+      addDestination(formData);
+
+      setFormData({
+        name: "",
+        image: "",
+        continent: "",
+        notes: "",
+        visited: false,
+      });
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <h3>Add a New Destination</h3>
       <input
         type="text"
         name="name"
         placeholder="Destination Name"
-        value={formValues.name}
+        value={formData.name}
         onChange={handleInputChange}
         required
       />
@@ -37,7 +48,7 @@ export default function AddDestinationForm({ onAddDestination }) {
         type="text"
         name="image"
         placeholder="Image URL"
-        value={formValues.image}
+        value={formData.image}
         onChange={handleInputChange}
         required
       />
@@ -45,14 +56,14 @@ export default function AddDestinationForm({ onAddDestination }) {
         type="text"
         name="continent"
         placeholder="Continent"
-        value={formValues.continent}
+        value={formData.continent}
         onChange={handleInputChange}
         required
       />
       <textarea
         name="notes"
         placeholder="Notes"
-        value={formValues.notes}
+        value={formData.notes}
         onChange={handleInputChange}
       />
       <button type="submit">Add Destination</button>
