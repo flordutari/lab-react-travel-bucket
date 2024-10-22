@@ -2,6 +2,7 @@ import "./App.css";
 import destinations from "./destinations.json";
 import { useState } from "react";
 import DestinationBox from "./components/DestinationBox";
+import AddDestinationForm from "./components/AddDestinationForm";
 
 function App() {
   const [destination, setDestination] = useState(destinations);
@@ -32,9 +33,21 @@ function App() {
     console.log(destination);
   }
 
+  function addNewCity(newCity) {
+    const newList = [...destination];
+    newList.push(newCity);
+    setDestination(newList);
+  }
+
   return (
     <>
       {/* {console.log(destination)} */}
+
+      <AddDestinationForm
+        cities={destination}
+        onAddNewCity={(newCity) => addNewCity(newCity)}
+      />
+
       <DestinationBox
         cities={destination}
         onDeleteCity={(city) => deleteCity(city)}
