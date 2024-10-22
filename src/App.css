@@ -5,6 +5,35 @@
   align-items: center;
 }
 
+.search-bar input {
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.search-bar button {
+  padding: 5px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.destination-boxes {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .container {
   border: 1px solid  #333;
   padding: 10px;
@@ -98,7 +127,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.add-destination-btn:hover {
+.add-destination-btn:hover, .search-bar button:hover {
   background-color: #007bff;
   color: #fff;
 }

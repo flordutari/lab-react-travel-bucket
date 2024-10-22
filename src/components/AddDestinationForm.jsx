@@ -1,6 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
-export const AddDestinationForm = ({handleSubmit, handleChange }, input) => {
+export const AddDestinationForm = ({ onAdd }) => {
+  const [input, setInput] = useState({name: "", image: "", continent: "", visited: false, notes: ""})
+
+  function handleChange(e) {
+    const newInput = {...input};
+    newInput[e.target.name] = e.target.value
+    setInput({...newInput});
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onAdd(input);
+    setInput({name: "", image: "", continent: "", visited: false, notes: ""});
+  } 
  
   return (
     <div className="destination-form">
