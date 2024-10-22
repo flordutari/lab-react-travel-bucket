@@ -34,39 +34,41 @@ export default function AddDestinationForm({ addDestination }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Add a New Destination</h3>
-      <input
-        type="text"
-        name="name"
-        placeholder="Destination Name"
-        value={formData.name}
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="text"
-        name="image"
-        placeholder="Image URL"
-        value={formData.image}
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="text"
-        name="continent"
-        placeholder="Continent"
-        value={formData.continent}
-        onChange={handleInputChange}
-        required
-      />
-      <textarea
-        name="notes"
-        placeholder="Notes"
-        value={formData.notes}
-        onChange={handleInputChange}
-      />
-      <button type="submit">Add Destination</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <h3>Add a New Destination</h3>
+        <input
+          type="text"
+          name="name"
+          placeholder="Destination Name"
+          value={formData.name}
+          onChange={handleInputChange}
+          required
+        />
+        <input
+          type="text"
+          name="image"
+          placeholder="Image URL"
+          value={formData.image}
+          onChange={handleInputChange}
+          required
+        />
+        <input
+          type="text"
+          name="continent"
+          placeholder="Continent"
+          value={formData.continent}
+          onChange={handleInputChange}
+          required
+        />
+        <textarea
+          name="notes"
+          placeholder="Notes"
+          value={formData.notes}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Add Destination</button>
+      </form>
+    </div>
   );
 }
