@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Paris",
+        "image": "https://franks-travelbox.com/wp-content/uploads/2018/07/frankreich-paris-paris-hat-viele-schocc88ne-sehenswucc88rdigkeiten-zu-bieten-unter-anderem-137-museen-200-kirchen-37-brucc88cken-sowie-463-parks-und-gacc88rten-frankreich-eyetronic-1200x800@2x.jpg",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "Tokyo",
+        "image": "https://a.cdn-hotels.com/gdcs/production138/d1523/f4fbd84e-c139-456d-9280-ed39c8a456ff.jpg",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the temples."
+    },
+    {
+        "name": "Seoul",
+        "image": "https://i.pinimg.com/originals/da/aa/4e/daaa4e70a14378d05ad9c0a9e767abd1.jpg",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Go on a food tour."
+    },
+    {
+        "name": "Chicago",
+        "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fodors.com%2Fwp-content%2Fuploads%2F2018%2F11%2F1_MilleniumPark_UltimateChicago.jpg&f=1&nofb=1&ipt=f892a1a3b184634d31ae64bac5c5294174717d7423f52e3bea4259cb088db49a&ipo=images",
+        "continent": "North America",
+        "visited": false,
+        "notes": "Eat deep dish pizza."
+    }
+]
