@@ -1,30 +1,31 @@
-import React from 'react'
-import './DestinationBox.css';
+import { useState, useEffect } from "react";
+import "./DestinationBox.css";
 
-export default function DestinationBox({destinations, toggleVisited, deleteDestination}) {
+export default function DestinationBox({ destination, toggleVisited, deleteDestination }) {
+    const [currentDestination, setCurrentDestination] = useState(destination)
+    
+    useEffect (() => {
+        setCurrentDestination(destination);
+    }, [destination]);
 
     return (
-    <div>
-        <ul>
-        {destinations.map(destination => (
-            <li key={destination.name}
-            className={destination.visited === true ? 'visited' : 'notVisited'}>
-            <p id='locName'>{destination.name.toUpperCase()}</p>
-            <img src={destination.image} />
-            <p className='mediumPTag'>Continent: {destination.continent}</p>
-            <p className='mediumPTag'>Suggestions: {destination.notes}</p>
+        <div>
+            <p id="locName">{currentDestination.name.toUpperCase()}</p>
+            <img src={currentDestination.image} />
+            <p className="mediumPTag">Continent: {currentDestination.continent}</p>
+            <p className="mediumPTag">Suggestions: {currentDestination.notes}</p>
             <p>
-                <input 
-                type='checkbox' 
-                checked={destination.visited} 
-                onChange={() => toggleVisited(destination.name)} 
-                /> 
+                <input
+                    type="checkbox"
+                    checked={currentDestination.visited}
+                    onChange={() => toggleVisited(currentDestination.name)} />
                 Mark as visited
             </p>
-            <button id='deletebtn' onClick={() => deleteDestination(destination.name)}>Delete Destination</button>
-            </li>
-        ))}
-        </ul>
-    </div>
-    )
+            <button
+                id="deletebtn"
+                onClick={() => deleteDestination(currentDestination.name)}>
+                Delete Destination
+            </button>
+        </div>
+    );
 }

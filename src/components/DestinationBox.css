@@ -1,4 +1,4 @@
-ul {
+/* ul {
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -11,7 +11,7 @@ li {
     border-width: 3px;
     margin: 2em;
     padding: 20px;
-}
+} */
 
 #locName {
     font-size: larger;
