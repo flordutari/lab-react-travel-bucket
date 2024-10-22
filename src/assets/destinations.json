@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Paris",
+        "image": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "Tokyo",
+        "image": "https://media.istockphoto.com/id/1216765464/photo/kabukicho-in-shinjuku-district-tokyo-japan.jpg?s=612x612&w=is&k=20&c=OSzCuRscili7xYTLDeV1rfPluk37b7k6uj5_swodmps=",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the temples."
+    },
+    {
+        "name": "New York",
+        "image": "https://media.istockphoto.com/id/538811669/photo/manhattan-panorama-with-its-skyscrapers-illuminated-at-dusk-new-york.jpg?s=612x612&w=is&k=20&c=UD90VLvORsuzcGGgDxgW55NPuMA8tp_gQneYjQTc524=",
+        "continent": "North America",
+        "visited": false,
+        "notes": "See the Statue of Liberty."
+    },
+    {
+        "name": "Sydney",
+        "image": "https://media.istockphoto.com/id/1269305108/photo/aerial-view-of-sydney-harbour-in-sydney-australia.jpg?s=612x612&w=is&k=20&c=VY-nct9Ia1CXTPwFNMNh-37ObcUDcID75jfB_M266Kw=",
+        "continent": "Australia",
+        "visited": false,
+        "notes": "Tour the Sydney Opera House."
+    },
+    {
+        "name": "Cairo",
+        "image": "https://media.istockphoto.com/id/1174818077/photo/mosque-and-pyramids.jpg?s=612x612&w=is&k=20&c=7kE9tv4LtKmCyDJWEsWfHM3YNuCiQHabdZiLYHRAyf0=",
+        "continent": "Africa",
+        "visited": false,
+        "notes": "Visit the Pyramids of Giza."
+    },
+    {
+        "name": "Rio de Janeiro",
+        "image": "https://media.istockphoto.com/id/608540602/photo/aerial-panorama-of-botafogo-bay-rio-de-janeiro.webp?a=1&b=1&s=612x612&w=0&k=20&c=WdPWJurLe3mQP57is0X4ztU1vyDlZrco-V0DE3b-E_I=",
+        "continent": "South America",
+        "visited": false,
+        "notes": "See the Christ the Redeemer statue."
+    },
+    {
+        "name": "Rome",
+        "image": "https://media.istockphoto.com/id/1148857816/photo/coliseum-in-rome.jpg?s=612x612&w=is&k=20&c=OFX-pgWf5ssThlBFtQ7-X7RbvG8UfuVHrJZAqG0q1ck=",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Explore the Colosseum."
+    }
+]
