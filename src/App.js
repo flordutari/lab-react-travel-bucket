@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import destinations from "./assets/destinations.json";
 import DestinationBox from "./components/DestinationBox";
+import AddDestinationForm from "./components/AddDestinationForm";
 
 function App() {
   const [destinationList, setDestinationList] = useState(destinations);
@@ -22,8 +23,16 @@ function App() {
     setDestinationList(updatedDestinations);
   };
 
+  const addDestination = (newDestination) => {
+    setDestinationList([
+      ...destinationList,
+      { ...newDestination, visited: false },
+    ]);
+  };
+
   return (
     <div className="App">
+      <AddDestinationForm onAddDestination={addDestination} />
       {destinationList.map((destination, index) => (
         <DestinationBox
           key={index}
