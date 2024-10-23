@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import destinations from "./destinations.json";
+import "./App.css";
+import DestinationBox from "./components/DestinationBox";
+import AddDestinationForm from "./components/AddDestinationForm";
 
-function App() {
+export default function App() {
+  const [destinationData, setDestinationData] = useState(destinations);
+
+  const toggleVisited = name => {
+    const newData = [...destinationData];
+    setDestinationData(
+      newData.map((destination) =>
+        destination.name === name
+          ? { ...destination, visited: !destination.visited }
+          : destination
+      )
+    );
+  }
+
+  const addDestination = () => { }
+
+  const deleteDestination = name => {
+    const newData = [...destinationData];
+    setDestinationData(
+      newData.filter(
+        destination => destination.name !== name
+      )
+    );
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>TRAVEL BUCKET LIST</h1>
+      <ul>
+        {destinations.map(destination => (
+          <li
+            key={destination.name}
+            className={destination.visited === true
+              ? "visited"
+              : "notVisited"}>
+            <DestinationBox
+              destination={destination}
+              toggleVisited={toggleVisited}
+              deleteDestination={deleteDestination}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
-
-export default App;

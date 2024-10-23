@@ -1,0 +1,47 @@
+/* ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+li {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 2em;
+    padding: 20px;
+} */
+
+#locName {
+    font-size: larger;
+    font-weight: 500;
+}
+
+img {
+    width: 300px;
+    height: 350px;
+}
+
+.mediumPTag {
+    font-size: medium;
+    font-weight: 200;
+}
+
+.visited {
+    border-color: rgb(212, 150, 238)
+}
+
+.notVisited {
+    border-color: black;
+}
+
+#deletebtn {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#deletebtn:hover {
+    box-shadow: 5px 7px rgb(251, 234, 251);
+    cursor: pointer;
+}
