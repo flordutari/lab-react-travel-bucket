@@ -1,0 +1,37 @@
+[
+    {
+        "name": "🇫🇷 Paris",
+        "image": "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/AHF2FYISNJO55J6N35YJBZ2JYY.jpg",
+        "continent": "Europe",
+        "visited": false,
+        "notes": "Visit the Eiffel Tower."
+    },
+    {
+        "name": "🇯🇵 Tokyo",
+        "image": "https://mediaim.expedia.com/destination/1/6d4b0a9bb63128b452d4da0a8b1d9f26.jpg",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the Sensō-ji temple."
+    },
+    {
+        "name": "🇭🇰 Hongkong",
+        "image": "https://www.disfrutahongkong.com/f/china/hong-kong/guia/tsim-sha-tsui-m.jpg",
+        "continent": "Asia",
+        "visited": false,
+        "notes": "Explore the Tsim Sha Tsui."
+    },
+    {
+        "name": "🇳🇦 Eupupa",
+        "image": "https://www.booknamibia.com/wp-content/uploads/2024/04/EpupaFallsHero2.webp",
+        "continent": "Africa",
+        "visited": false,
+        "notes": "Explore the Epupa Falls."
+    },
+    {
+        "name": "🇨🇦 Alberta",
+        "image": "https://assets.vogue.com/photos/65c4c09bbb939fbbf042091c/master/w_2560%2Cc_limit/GettyImages-843431360.jpg",
+        "continent": "North America",
+        "visited": false,
+        "notes": "Explore the Banff National Park."
+    }
+]

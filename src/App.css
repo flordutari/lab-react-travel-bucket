@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .App-logo {
@@ -35,4 +42,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+input {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+button {
+margin: 5px;
+font-size: 16px;
+border: 2px solid #041209;
+border-radius: 5px;
+background-color: white;
+cursor: pointer;
+transition: background-color 0.3s ease;
+display: block;
+}
+
+button:hover {
+  background-color: #e2e6ea;
+}
+
+.destination-box {
+  text-align: left;
 }
