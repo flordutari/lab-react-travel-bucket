@@ -5,8 +5,8 @@ export default function DestinationBox({destination, onDelete}) {
 
   const [isVisited, setIsVisited] = useState(destination.visited); 
   
-  function markVisited () {
-    setIsVisited(true);
+  function handleClick () {
+    setIsVisited(prevState=> !prevState);
   }  
 
   return (
@@ -15,7 +15,7 @@ export default function DestinationBox({destination, onDelete}) {
         <p>{destination.continent}</p>
         <p>{destination.notes}</p>
         <img src={destination.image} width={500}/>
-        <button onClick={markVisited}>{isVisited? "✅ Visited already": "Mark as Visited" }</button>
+        <button onClick={handleClick}>{isVisited? "✅ Visited already": "Mark as Visited" }</button>
         <button onClick={onDelete}>Delete</button>
     </div>
   )
